@@ -12,6 +12,8 @@
 		A24E09E9234286150087087B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A24E09E7234286150087087B /* Main.storyboard */; };
 		A24E09EB2342861B0087087B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A24E09EA2342861B0087087B /* Assets.xcassets */; };
 		A24E09EE2342861B0087087B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A24E09EC2342861B0087087B /* LaunchScreen.storyboard */; };
+		A24E09F9234291EC0087087B /* InsightWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24E09F8234291EC0087087B /* InsightWeatherData.swift */; };
+		A24E09FB2342921D0087087B /* InsightHTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24E09FA2342921D0087087B /* InsightHTTPRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		A24E09EA2342861B0087087B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A24E09ED2342861B0087087B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A24E09EF2342861B0087087B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A24E09F8234291EC0087087B /* InsightWeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightWeatherData.swift; sourceTree = "<group>"; };
+		A24E09FA2342921D0087087B /* InsightHTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightHTTPRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,40 @@
 		A24E09E2234286150087087B /* Space Nerd */ = {
 			isa = PBXGroup;
 			children = (
+				A24E09F723428E220087087B /* Controller */,
+				A24E09F623428E0D0087087B /* View */,
+				A24E09F523428E020087087B /* Model */,
 				A24E09E3234286150087087B /* AppDelegate.swift */,
-				A24E09E5234286150087087B /* ViewController.swift */,
-				A24E09E7234286150087087B /* Main.storyboard */,
-				A24E09EA2342861B0087087B /* Assets.xcassets */,
-				A24E09EC2342861B0087087B /* LaunchScreen.storyboard */,
 				A24E09EF2342861B0087087B /* Info.plist */,
 			);
 			path = "Space Nerd";
+			sourceTree = "<group>";
+		};
+		A24E09F523428E020087087B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A24E09F8234291EC0087087B /* InsightWeatherData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A24E09F623428E0D0087087B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A24E09EC2342861B0087087B /* LaunchScreen.storyboard */,
+				A24E09E7234286150087087B /* Main.storyboard */,
+				A24E09EA2342861B0087087B /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A24E09F723428E220087087B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A24E09E5234286150087087B /* ViewController.swift */,
+				A24E09FA2342921D0087087B /* InsightHTTPRequest.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +167,8 @@
 			files = (
 				A24E09E6234286150087087B /* ViewController.swift in Sources */,
 				A24E09E4234286150087087B /* AppDelegate.swift in Sources */,
+				A24E09FB2342921D0087087B /* InsightHTTPRequest.swift in Sources */,
+				A24E09F9234291EC0087087B /* InsightWeatherData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
