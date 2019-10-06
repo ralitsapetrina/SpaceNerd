@@ -23,20 +23,22 @@ struct InsightDataRequest: Decodable {
     
     
     init() {
-        let accessString = "https: //api.nasa.gov/insight_weather/?api_key=\(API_KEY)&feedtype=json&ver=1.0"
+        let accessString = "https://api.nasa.gov/insight_weather/?api_key=\(API_KEY)&feedtype=json&ver=1.0"
         guard let accessURL = URL(string: accessString) else {fatalError()}
         self.accessURL = accessURL
     }
     
     
-    func getInsightData(completion: @escaping(Result<solData, RequestError>) -> Void) {
+    func getInsightData(completion: @escaping(Result<Dictionary<String, Any>, RequestError>) -> Void) {
         let dataTask = URLSession.shared.dataTask(with: accessURL) {data, response, error in
             guard let jsonData = data else {
                 completion(.failure(.noDataAvailable))
+                print("data error")
                 return
             }
             guard let response = response as? HTTPURLResponse, (200...299).contains(response.statusCode) else {
                 completion(.failure(.serverError))
+                print("response error")
                 return
             }
             if error != nil || data == nil {
@@ -44,12 +46,12 @@ struct InsightDataRequest: Decodable {
                 return
             }
             do {
-                let decoder = JSONDecoder()
-                let dataResponse = try decoder.decode(solData.self, from: jsonData)
-                let weatherResponseData = dataResponse
-                completion(.success(weatherResponseData))
+                let dataResponse = try JSONSerialization.jsonObject(with: jsonData, options: []) as? Dictionary<String, Any>
+                let weatherDataResponse = dataResponse
+                completion(.success(weatherDataResponse ?? [:]))
             }catch{
                 completion(.failure(.canNotProcessData))
+                print("json failed")
             }
         }
         dataTask.resume()
