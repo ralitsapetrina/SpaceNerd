@@ -13,6 +13,7 @@
 		A24E09EB2342861B0087087B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A24E09EA2342861B0087087B /* Assets.xcassets */; };
 		A24E09F9234291EC0087087B /* InsightWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24E09F8234291EC0087087B /* InsightWeatherData.swift */; };
 		A24E09FB2342921D0087087B /* InsightHTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24E09FA2342921D0087087B /* InsightHTTPRequest.swift */; };
+		A26B292A237CA492009D68E0 /* SingleSolCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26B2929237CA492009D68E0 /* SingleSolCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A24E09EF2342861B0087087B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A24E09F8234291EC0087087B /* InsightWeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightWeatherData.swift; sourceTree = "<group>"; };
 		A24E09FA2342921D0087087B /* InsightHTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightHTTPRequest.swift; sourceTree = "<group>"; };
+		A26B2929237CA492009D68E0 /* SingleSolCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSolCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			children = (
 				A24E09E5234286150087087B /* ViewController.swift */,
 				A24E09FA2342921D0087087B /* InsightHTTPRequest.swift */,
+				A26B2929237CA492009D68E0 /* SingleSolCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			files = (
 				A24E09E6234286150087087B /* ViewController.swift in Sources */,
 				A24E09E4234286150087087B /* AppDelegate.swift in Sources */,
+				A26B292A237CA492009D68E0 /* SingleSolCell.swift in Sources */,
 				A24E09FB2342921D0087087B /* InsightHTTPRequest.swift in Sources */,
 				A24E09F9234291EC0087087B /* InsightWeatherData.swift in Sources */,
 			);

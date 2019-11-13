@@ -54,6 +54,7 @@ struct InsightDataRequest: Decodable {
                 print("json failed")
             }
         }
+        print(accessURL)
         dataTask.resume()
     }
 }
