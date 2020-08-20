@@ -8,28 +8,53 @@
 
 /* Begin PBXBuildFile section */
 		A24E09E4234286150087087B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24E09E3234286150087087B /* AppDelegate.swift */; };
-		A24E09E6234286150087087B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24E09E5234286150087087B /* ViewController.swift */; };
-		A24E09E9234286150087087B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A24E09E7234286150087087B /* Main.storyboard */; };
+		A24E09E6234286150087087B /* MarsWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24E09E5234286150087087B /* MarsWeatherViewController.swift */; };
 		A24E09EB2342861B0087087B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A24E09EA2342861B0087087B /* Assets.xcassets */; };
 		A24E09F9234291EC0087087B /* InsightWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24E09F8234291EC0087087B /* InsightWeatherData.swift */; };
 		A24E09FB2342921D0087087B /* InsightHTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24E09FA2342921D0087087B /* InsightHTTPRequest.swift */; };
 		A26B292A237CA492009D68E0 /* SingleSolCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26B2929237CA492009D68E0 /* SingleSolCell.swift */; };
+		D1117FE124B2FB9700F616DA /* SingleSolCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1117FE024B2FB9700F616DA /* SingleSolCell.xib */; };
+		D19F5E7224C324D100F88B73 /* MarsWeatherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D19F5E7124C324D100F88B73 /* MarsWeatherViewController.xib */; };
+		D19F5E7624C633C100F88B73 /* SolDataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19F5E7524C633C100F88B73 /* SolDataItem.swift */; };
+		D19F5EBA24C9DA6600F88B73 /* SpaceNerdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19F5EB924C9DA6600F88B73 /* SpaceNerdTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D19F5EBC24C9DA6600F88B73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A24E09D8234286140087087B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A24E09DF234286150087087B;
+			remoteInfo = "Space Nerd";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A24E09E0234286150087087B /* Space Nerd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Space Nerd.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A24E09E3234286150087087B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A24E09E5234286150087087B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A24E09E8234286150087087B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A24E09E5234286150087087B /* MarsWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsWeatherViewController.swift; sourceTree = "<group>"; };
 		A24E09EA2342861B0087087B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A24E09EF2342861B0087087B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A24E09F8234291EC0087087B /* InsightWeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightWeatherData.swift; sourceTree = "<group>"; };
 		A24E09FA2342921D0087087B /* InsightHTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightHTTPRequest.swift; sourceTree = "<group>"; };
 		A26B2929237CA492009D68E0 /* SingleSolCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSolCell.swift; sourceTree = "<group>"; };
+		D1117FE024B2FB9700F616DA /* SingleSolCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleSolCell.xib; sourceTree = "<group>"; };
+		D19F5E7124C324D100F88B73 /* MarsWeatherViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarsWeatherViewController.xib; sourceTree = "<group>"; };
+		D19F5E7524C633C100F88B73 /* SolDataItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolDataItem.swift; sourceTree = "<group>"; };
+		D19F5EB724C9DA6600F88B73 /* SpaceNerdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceNerdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D19F5EB924C9DA6600F88B73 /* SpaceNerdTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceNerdTests.swift; sourceTree = "<group>"; };
+		D19F5EBB24C9DA6600F88B73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A24E09DD234286150087087B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D19F5EB424C9DA6600F88B73 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,6 +68,8 @@
 			isa = PBXGroup;
 			children = (
 				A24E09E2234286150087087B /* Space Nerd */,
+				A24E09EA2342861B0087087B /* Assets.xcassets */,
+				D19F5EB824C9DA6600F88B73 /* SpaceNerdTests */,
 				A24E09E1234286150087087B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				A24E09E0234286150087087B /* Space Nerd.app */,
+				D19F5EB724C9DA6600F88B73 /* SpaceNerdTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,8 +86,8 @@
 		A24E09E2234286150087087B /* Space Nerd */ = {
 			isa = PBXGroup;
 			children = (
-				A24E09F723428E220087087B /* Controller */,
-				A24E09F623428E0D0087087B /* View */,
+				A24E09F723428E220087087B /* MarsWeatherView */,
+				A24E09F623428E0D0087087B /* Manager */,
 				A24E09F523428E020087087B /* Model */,
 				A24E09E3234286150087087B /* AppDelegate.swift */,
 				A24E09EF2342861B0087087B /* Info.plist */,
@@ -75,23 +103,57 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		A24E09F623428E0D0087087B /* View */ = {
+		A24E09F623428E0D0087087B /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				A24E09E7234286150087087B /* Main.storyboard */,
-				A24E09EA2342861B0087087B /* Assets.xcassets */,
+				D19F5E7324C6338200F88B73 /* InsightMarsWeatherManager */,
 			);
-			path = View;
+			path = Manager;
 			sourceTree = "<group>";
 		};
-		A24E09F723428E220087087B /* Controller */ = {
+		A24E09F723428E220087087B /* MarsWeatherView */ = {
 			isa = PBXGroup;
 			children = (
-				A24E09E5234286150087087B /* ViewController.swift */,
-				A24E09FA2342921D0087087B /* InsightHTTPRequest.swift */,
-				A26B2929237CA492009D68E0 /* SingleSolCell.swift */,
+				D1117FDF24B2FB7B00F616DA /* SingleSolCell */,
+				A24E09E5234286150087087B /* MarsWeatherViewController.swift */,
+				D19F5E7124C324D100F88B73 /* MarsWeatherViewController.xib */,
 			);
-			path = Controller;
+			path = MarsWeatherView;
+			sourceTree = "<group>";
+		};
+		D1117FDF24B2FB7B00F616DA /* SingleSolCell */ = {
+			isa = PBXGroup;
+			children = (
+				A26B2929237CA492009D68E0 /* SingleSolCell.swift */,
+				D1117FE024B2FB9700F616DA /* SingleSolCell.xib */,
+			);
+			path = SingleSolCell;
+			sourceTree = "<group>";
+		};
+		D19F5E7324C6338200F88B73 /* InsightMarsWeatherManager */ = {
+			isa = PBXGroup;
+			children = (
+				D19F5E7424C6339C00F88B73 /* Class */,
+				A24E09FA2342921D0087087B /* InsightHTTPRequest.swift */,
+			);
+			path = InsightMarsWeatherManager;
+			sourceTree = "<group>";
+		};
+		D19F5E7424C6339C00F88B73 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				D19F5E7524C633C100F88B73 /* SolDataItem.swift */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		D19F5EB824C9DA6600F88B73 /* SpaceNerdTests */ = {
+			isa = PBXGroup;
+			children = (
+				D19F5EB924C9DA6600F88B73 /* SpaceNerdTests.swift */,
+				D19F5EBB24C9DA6600F88B73 /* Info.plist */,
+			);
+			path = SpaceNerdTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -114,18 +176,40 @@
 			productReference = A24E09E0234286150087087B /* Space Nerd.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D19F5EB624C9DA6600F88B73 /* SpaceNerdTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D19F5EC024C9DA6600F88B73 /* Build configuration list for PBXNativeTarget "SpaceNerdTests" */;
+			buildPhases = (
+				D19F5EB324C9DA6600F88B73 /* Sources */,
+				D19F5EB424C9DA6600F88B73 /* Frameworks */,
+				D19F5EB524C9DA6600F88B73 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D19F5EBD24C9DA6600F88B73 /* PBXTargetDependency */,
+			);
+			name = SpaceNerdTests;
+			productName = SpaceNerdTests;
+			productReference = D19F5EB724C9DA6600F88B73 /* SpaceNerdTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		A24E09D8234286140087087B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1030;
+				LastSwiftUpdateCheck = 1160;
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "Ralitsa Petrina";
 				TargetAttributes = {
 					A24E09DF234286150087087B = {
 						CreatedOnToolsVersion = 10.3;
+					};
+					D19F5EB624C9DA6600F88B73 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = A24E09DF234286150087087B;
 					};
 				};
 			};
@@ -143,6 +227,7 @@
 			projectRoot = "";
 			targets = (
 				A24E09DF234286150087087B /* Space Nerd */,
+				D19F5EB624C9DA6600F88B73 /* SpaceNerdTests */,
 			);
 		};
 /* End PBXProject section */
@@ -153,7 +238,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A24E09EB2342861B0087087B /* Assets.xcassets in Resources */,
-				A24E09E9234286150087087B /* Main.storyboard in Resources */,
+				D1117FE124B2FB9700F616DA /* SingleSolCell.xib in Resources */,
+				D19F5E7224C324D100F88B73 /* MarsWeatherViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D19F5EB524C9DA6600F88B73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,26 +257,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A24E09E6234286150087087B /* ViewController.swift in Sources */,
+				A24E09E6234286150087087B /* MarsWeatherViewController.swift in Sources */,
 				A24E09E4234286150087087B /* AppDelegate.swift in Sources */,
+				D19F5E7624C633C100F88B73 /* SolDataItem.swift in Sources */,
 				A26B292A237CA492009D68E0 /* SingleSolCell.swift in Sources */,
 				A24E09FB2342921D0087087B /* InsightHTTPRequest.swift in Sources */,
 				A24E09F9234291EC0087087B /* InsightWeatherData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D19F5EB324C9DA6600F88B73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D19F5EBA24C9DA6600F88B73 /* SpaceNerdTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		A24E09E7234286150087087B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A24E09E8234286150087087B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		D19F5EBD24C9DA6600F88B73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A24E09DF234286150087087B /* Space Nerd */;
+			targetProxy = D19F5EBC24C9DA6600F88B73 /* PBXContainerItemProxy */;
 		};
-/* End PBXVariantGroup section */
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		A24E09F02342861B0087087B /* Debug */ = {
@@ -309,6 +408,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z23P68FL2M;
 				INFOPLIST_FILE = "Space Nerd/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -327,6 +427,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z23P68FL2M;
 				INFOPLIST_FILE = "Space Nerd/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,6 +436,48 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D19F5EBE24C9DA6600F88B73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z23P68FL2M;
+				INFOPLIST_FILE = SpaceNerdTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.petrina.SpaceNerdTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Space Nerd.app/Space Nerd";
+			};
+			name = Debug;
+		};
+		D19F5EBF24C9DA6600F88B73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z23P68FL2M;
+				INFOPLIST_FILE = SpaceNerdTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.petrina.SpaceNerdTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Space Nerd.app/Space Nerd";
 			};
 			name = Release;
 		};
@@ -355,6 +498,15 @@
 			buildConfigurations = (
 				A24E09F32342861B0087087B /* Debug */,
 				A24E09F42342861B0087087B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D19F5EC024C9DA6600F88B73 /* Build configuration list for PBXNativeTarget "SpaceNerdTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D19F5EBE24C9DA6600F88B73 /* Debug */,
+				D19F5EBF24C9DA6600F88B73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

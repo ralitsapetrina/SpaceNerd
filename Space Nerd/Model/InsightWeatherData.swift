@@ -13,7 +13,7 @@ struct SolData {
     var Season: String
     var horizontalWindSpeed: WeatherData // horizontal wind speed data
     var windDirection: Dictionary<String, Any>
-    var atmosphericPressure: WeatherData // atmospheric pressur data
+    var atmosphericPressure: WeatherData // atmospheric pressure data
     var lastUTC: String
     var atmosphericTemperature: WeatherData // temperature data
     var firstUTC: String
