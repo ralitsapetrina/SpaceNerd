@@ -9,6 +9,7 @@
 import Foundation
 
 class SolDataItem {
+    let solNum: String
     let avgTemp: Double
     let minTemp: Double
     let maxTemp: Double
@@ -19,7 +20,8 @@ class SolDataItem {
     let windSpeedValidity: Bool?
     let atmPressureValidity: Bool?
     
-    init(avgTemp: Double, minTemp: Double, maxTemp: Double, avgWindSpeed: Double, lasUTC: String, avgAtmPressure: Double, tempValidity: Bool, windSpeedValidity: Bool, atmPressureValidity: Bool) {
+    init(solNum: String, avgTemp: Double, minTemp: Double, maxTemp: Double, avgWindSpeed: Double, lasUTC: String, avgAtmPressure: Double, tempValidity: Bool, windSpeedValidity: Bool, atmPressureValidity: Bool) {
+        self.solNum = solNum
         self.avgTemp = avgTemp
         self.minTemp = minTemp
         self.maxTemp = maxTemp

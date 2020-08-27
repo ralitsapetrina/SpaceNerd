@@ -87,7 +87,7 @@ class InsightData {
         for sol in self.solKeys {
             let mySolDataObject = self.createSolDataObject(dataDict: data[sol] as! Dictionary<String, Any>)
             let myValidityCheckObject = self.createValidityCheckObject(validityChecks: self.validityChecks[sol] as! Dictionary<String, Any>)
-            mySols.append(self.createSolDataItem(solData: mySolDataObject, validityChecks: myValidityCheckObject))
+            mySols.append(self.createSolDataItem(solData: mySolDataObject, validityChecks: myValidityCheckObject, forSol: sol))
         }
         return mySols
     }
@@ -102,9 +102,9 @@ class InsightData {
         return checkValidity
     }
     
-    func createSolDataItem(solData: SolData, validityChecks: ValidityChecks) -> SolDataItem {
+    func createSolDataItem(solData: SolData, validityChecks: ValidityChecks, forSol: String) -> SolDataItem {
         print("createSolDataItem")
-        let mySolData = SolDataItem(avgTemp: solData.atmosphericTemperature.avarageValue, minTemp: solData.atmosphericTemperature.minValue, maxTemp: solData.atmosphericTemperature.maxValue, avgWindSpeed: solData.horizontalWindSpeed.avarageValue, lasUTC: solData.lastUTC, avgAtmPressure: solData.atmosphericPressure.avarageValue, tempValidity: validityChecks.atmosphericTemperatureCheck.isValid, windSpeedValidity: validityChecks.horizontalWindSpeedCheck.isValid, atmPressureValidity: validityChecks.atmosphericPressure.isValid)
+        let mySolData = SolDataItem(solNum: forSol, avgTemp: solData.atmosphericTemperature.avarageValue, minTemp: solData.atmosphericTemperature.minValue, maxTemp: solData.atmosphericTemperature.maxValue, avgWindSpeed: solData.horizontalWindSpeed.avarageValue, lasUTC: solData.lastUTC, avgAtmPressure: solData.atmosphericPressure.avarageValue, tempValidity: validityChecks.atmosphericTemperatureCheck.isValid, windSpeedValidity: validityChecks.horizontalWindSpeedCheck.isValid, atmPressureValidity: validityChecks.atmosphericPressure.isValid)
         return mySolData
     }
 }

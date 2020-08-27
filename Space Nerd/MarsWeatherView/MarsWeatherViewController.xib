@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MarsWeatherViewController" customModule="Space_Nerd" customModuleProvider="target">
             <connections>
+                <outlet property="solsTable" destination="9xf-ie-6RZ" id="KZf-N8-Wat"/>
                 <outlet property="view" destination="iN0-l3-epB" id="56c-ZO-Amc"/>
             </connections>
         </placeholder>
@@ -18,16 +19,18 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XnW-nl-pPr">
-                    <rect key="frame" x="184" y="433" width="46" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Button"/>
-                    <connections>
-                        <action selector="btnTap:" destination="-1" eventType="touchUpInside" id="vk3-g6-VGz"/>
-                    </connections>
-                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9xf-ie-6RZ">
+                    <rect key="frame" x="16" y="60" width="382" height="786"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9xf-ie-6RZ" secondAttribute="trailing" constant="16" id="1MC-ME-eNy"/>
+                <constraint firstItem="9xf-ie-6RZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="QGS-vL-BmD"/>
+                <constraint firstItem="9xf-ie-6RZ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="egh-Sf-DfX"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="9xf-ie-6RZ" secondAttribute="bottom" constant="16" id="kks-Cf-jyN"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="139" y="142"/>
         </view>
