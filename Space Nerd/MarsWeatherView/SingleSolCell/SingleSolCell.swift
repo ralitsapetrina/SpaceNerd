@@ -18,14 +18,18 @@ class SingleSolCell: UITableViewCell {
     @IBOutlet weak var minTemp: UILabel!
     @IBOutlet weak var avgWindSpeed: UILabel!
     @IBOutlet weak var avgAtmPressure: UILabel!
+    @IBOutlet weak var tempValidator: UIImageView!
+    @IBOutlet weak var windValidator: UIImageView!
+    @IBOutlet weak var pressureValidator: UIImageView!
+    
     
     let parent = MarsWeatherViewController()
     var currentSol: SolDataItem?
+    var generalValidation: Bool = true
 
     override func awakeFromNib() {
         super.awakeFromNib()
         self.configureCell()
-        // Initialization code
     }
 
     override func layoutSubviews() {
@@ -33,23 +37,40 @@ class SingleSolCell: UITableViewCell {
         self.configureCell()
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func getValidatorColor(for validator: Bool?) -> UIColor{
+        if let isValid = validator {
+            if isValid {
+                return UIColor.systemGreen
+            } else {
+                self.generalValidation = false
+                return UIColor.systemRed
+            }
+        }
+        self.generalValidation = false
+        return UIColor.gray
+    }
+    
+    func getGeneralValidatorColor() -> UIColor {
+        if generalValidation {
+            return UIColor.systemGreen
+        } else {
+            return UIColor.systemRed
+        }
     }
     
     func configureCell() {
-        print("configureCell")
-        if let currenSolItem = self.currentSol {
-            print("if let currenSolItem = self.currentSol")
-            solNumber.text = "Sol \(currenSolItem.solNum)"
-            currentDate.text = "28 Aug."
-            avgTemp.text = "\(currenSolItem.avgTemp)"
-            maxTemp.text = "\(currenSolItem.maxTemp)"
-            minTemp.text = "\(currenSolItem.minTemp)"
-            avgWindSpeed.text = "\(currenSolItem.avgWindSpeed)"
-            avgAtmPressure.text = "\(currenSolItem.avgAtmPressure)"
+        if let currentSolItem = self.currentSol {
+            solNumber.text = "Sol \(currentSolItem.solNum)"
+            currentDate.text = currentSolItem.firstUTC.fromUTCToDateMonthString()
+            avgTemp.text = currentSolItem.avgTemp.formattedAsTemperatureString()
+            maxTemp.text = currentSolItem.maxTemp.formattedAsTemperatureString()
+            minTemp.text = currentSolItem.minTemp.formattedAsTemperatureString()
+            avgWindSpeed.text = currentSolItem.avgWindSpeed.formattedAsWindSpeedString()
+            avgAtmPressure.text = currentSolItem.avgAtmPressure.formattedAsAtmPressureString()
+            tempValidator.tintColor = getValidatorColor(for: currentSolItem.tempValidity)
+            windValidator.tintColor = getValidatorColor(for: currentSolItem.windSpeedValidity)
+            pressureValidator.tintColor = getValidatorColor(for: currentSolItem.atmPressureValidity)
+            solValidation.tintColor = getGeneralValidatorColor()
         }
     }
 

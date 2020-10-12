@@ -23,15 +23,10 @@ class MarsWeatherViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.solsTable.delegate = self
-        self.solsTable.dataSource = self
-        
-        let nib = UINib(nibName: "SingleSolCell", bundle: nil)
-        solsTable.register(nib, forCellReuseIdentifier: "SingleSolCell")
+        self.setUpTableView()
     }
     
     func loadSolItems() {
-        print("loadSolItems")
         InsightData.solManager.getInsightData() {
             result in
             DispatchQueue.main.async {
@@ -43,20 +38,18 @@ class MarsWeatherViewController: UIViewController {
                     self.present(alert, animated: true, completion: nil)
                 case .success(let solArray):
                     self.solItems = solArray
-                    print(self.solItems)
                 }
                 self.solsTable.reloadData()
             }
             
         }
     }
-     
-    @IBAction func btnTap(_ sender: Any) {
-        if let myArray = self.solItems {
-            print(myArray[0].tempValidity)
-        } else {
-            print("something happened.... ")
-        }
+    
+    func setUpTableView() {
+        self.solsTable.delegate = self
+        self.solsTable.dataSource = self
+        let nib = UINib(nibName: "SingleSolCell", bundle: nil)
+        solsTable.register(nib, forCellReuseIdentifier: "SingleSolCell")
     }
 }
 
@@ -64,7 +57,6 @@ extension MarsWeatherViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let solsCount = solItems?.count {
-            print(solsCount)
             return solsCount
         }
         return 0
@@ -72,7 +64,7 @@ extension MarsWeatherViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SingleSolCell") as! SingleSolCell
-        print(solItems?[indexPath.row])
+        cell.backgroundColor = .clear
         cell.currentSol = solItems?[indexPath.row]
         return cell
     }

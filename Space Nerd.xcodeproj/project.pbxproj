@@ -14,6 +14,11 @@
 		A24E09FB2342921D0087087B /* InsightHTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24E09FA2342921D0087087B /* InsightHTTPRequest.swift */; };
 		A26B292A237CA492009D68E0 /* SingleSolCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26B2929237CA492009D68E0 /* SingleSolCell.swift */; };
 		D1117FE124B2FB9700F616DA /* SingleSolCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1117FE024B2FB9700F616DA /* SingleSolCell.xib */; };
+		D1554A6A25343DB800DAF426 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1554A6925343DB800DAF426 /* DoubleExtension.swift */; };
+		D17AE45024F976AF00C2EBA1 /* PascalToHectopascal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17AE44F24F976AF00C2EBA1 /* PascalToHectopascal.swift */; };
+		D17AE45224F978B300C2EBA1 /* MeterToKilometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17AE45124F978B300C2EBA1 /* MeterToKilometer.swift */; };
+		D17AE45424F9799300C2EBA1 /* MpsToKmph.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17AE45324F9799300C2EBA1 /* MpsToKmph.swift */; };
+		D17AE45624F97BEB00C2EBA1 /* UTCToDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17AE45524F97BEB00C2EBA1 /* UTCToDate.swift */; };
 		D19F5E7224C324D100F88B73 /* MarsWeatherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D19F5E7124C324D100F88B73 /* MarsWeatherViewController.xib */; };
 		D19F5E7624C633C100F88B73 /* SolDataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19F5E7524C633C100F88B73 /* SolDataItem.swift */; };
 		D19F5EBA24C9DA6600F88B73 /* SpaceNerdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19F5EB924C9DA6600F88B73 /* SpaceNerdTests.swift */; };
@@ -39,6 +44,11 @@
 		A24E09FA2342921D0087087B /* InsightHTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightHTTPRequest.swift; sourceTree = "<group>"; };
 		A26B2929237CA492009D68E0 /* SingleSolCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSolCell.swift; sourceTree = "<group>"; };
 		D1117FE024B2FB9700F616DA /* SingleSolCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleSolCell.xib; sourceTree = "<group>"; };
+		D1554A6925343DB800DAF426 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
+		D17AE44F24F976AF00C2EBA1 /* PascalToHectopascal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PascalToHectopascal.swift; sourceTree = "<group>"; };
+		D17AE45124F978B300C2EBA1 /* MeterToKilometer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeterToKilometer.swift; sourceTree = "<group>"; };
+		D17AE45324F9799300C2EBA1 /* MpsToKmph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MpsToKmph.swift; sourceTree = "<group>"; };
+		D17AE45524F97BEB00C2EBA1 /* UTCToDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTCToDate.swift; sourceTree = "<group>"; };
 		D19F5E7124C324D100F88B73 /* MarsWeatherViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarsWeatherViewController.xib; sourceTree = "<group>"; };
 		D19F5E7524C633C100F88B73 /* SolDataItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolDataItem.swift; sourceTree = "<group>"; };
 		D19F5EB724C9DA6600F88B73 /* SpaceNerdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceNerdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +96,8 @@
 		A24E09E2234286150087087B /* Space Nerd */ = {
 			isa = PBXGroup;
 			children = (
+				D17AE44E24F9769500C2EBA1 /* Converters */,
+				D17AE44B24F974B300C2EBA1 /* Extensions */,
 				A24E09F723428E220087087B /* MarsWeatherView */,
 				A24E09F623428E0D0087087B /* Manager */,
 				A24E09F523428E020087087B /* Model */,
@@ -128,6 +140,25 @@
 				D1117FE024B2FB9700F616DA /* SingleSolCell.xib */,
 			);
 			path = SingleSolCell;
+			sourceTree = "<group>";
+		};
+		D17AE44B24F974B300C2EBA1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D1554A6925343DB800DAF426 /* DoubleExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D17AE44E24F9769500C2EBA1 /* Converters */ = {
+			isa = PBXGroup;
+			children = (
+				D17AE44F24F976AF00C2EBA1 /* PascalToHectopascal.swift */,
+				D17AE45124F978B300C2EBA1 /* MeterToKilometer.swift */,
+				D17AE45324F9799300C2EBA1 /* MpsToKmph.swift */,
+				D17AE45524F97BEB00C2EBA1 /* UTCToDate.swift */,
+			);
+			path = Converters;
 			sourceTree = "<group>";
 		};
 		D19F5E7324C6338200F88B73 /* InsightMarsWeatherManager */ = {
@@ -257,10 +288,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1554A6A25343DB800DAF426 /* DoubleExtension.swift in Sources */,
 				A24E09E6234286150087087B /* MarsWeatherViewController.swift in Sources */,
 				A24E09E4234286150087087B /* AppDelegate.swift in Sources */,
+				D17AE45024F976AF00C2EBA1 /* PascalToHectopascal.swift in Sources */,
+				D17AE45424F9799300C2EBA1 /* MpsToKmph.swift in Sources */,
+				D17AE45624F97BEB00C2EBA1 /* UTCToDate.swift in Sources */,
 				D19F5E7624C633C100F88B73 /* SolDataItem.swift in Sources */,
 				A26B292A237CA492009D68E0 /* SingleSolCell.swift in Sources */,
+				D17AE45224F978B300C2EBA1 /* MeterToKilometer.swift in Sources */,
 				A24E09FB2342921D0087087B /* InsightHTTPRequest.swift in Sources */,
 				A24E09F9234291EC0087087B /* InsightWeatherData.swift in Sources */,
 			);
