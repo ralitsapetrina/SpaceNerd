@@ -18,60 +18,107 @@ class SingleSolCell: UITableViewCell {
     @IBOutlet weak var minTemp: UILabel!
     @IBOutlet weak var avgWindSpeed: UILabel!
     @IBOutlet weak var avgAtmPressure: UILabel!
-    @IBOutlet weak var tempValidator: UIImageView!
-    @IBOutlet weak var windValidator: UIImageView!
-    @IBOutlet weak var pressureValidator: UIImageView!
-    
     
     let parent = MarsWeatherViewController()
     var currentSol: SolDataItem?
-    var generalValidation: Bool = true
-
+    var cellNotConfigured: Bool = true
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.configureCell()
     }
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.configureCell()
+//        self.configureCell()
     }
     
-    func getValidatorColor(for validator: Bool?) -> UIColor{
-        if let isValid = validator {
-            if isValid {
-                return UIColor.systemGreen
-            } else {
-                self.generalValidation = false
-                return UIColor.systemRed
-            }
+    var isSolTempValid: Bool {
+        if let currentSol = currentSol {
+            return currentSol.isTempValid
         }
-        self.generalValidation = false
-        return UIColor.gray
+        return false
+    }
+    
+    var isSolWindSpeedValid: Bool {
+        if let currentSol = currentSol {
+            return currentSol.isWindSpeedValid
+        }
+        return false
+    }
+    
+    var isSolAtmPressureValid: Bool {
+        if let currentSol = currentSol {
+            return currentSol.isAtmPressureValid
+        }
+        return false
+    }
+    
+    func isDataValid() -> Bool {
+        if isSolTempValid && isSolWindSpeedValid && isSolAtmPressureValid {
+            return true
+        }
+        return false
     }
     
     func getGeneralValidatorColor() -> UIColor {
-        if generalValidation {
+        if isDataValid() {
             return UIColor.systemGreen
         } else {
             return UIColor.systemRed
         }
     }
     
+    func changeColorsForNALabels(for labels: [UILabel]) {
+        for label in labels {
+            label.textColor = UIColor(named: "SpaceNAText")
+        }
+    }
+    
+    func changeColorsForNALabelsIfNeeded() {
+        if !isSolTempValid {
+            changeColorsForNALabels(for: [avgTemp, maxTemp, minTemp])
+        }
+        
+        if !isSolWindSpeedValid {
+            changeColorsForNALabels(for: [avgWindSpeed])
+        }
+        
+        if !isSolAtmPressureValid {
+            changeColorsForNALabels(for: [avgAtmPressure])
+        }
+    }
+    
     func configureCell() {
-        if let currentSolItem = self.currentSol {
-            solNumber.text = "Sol \(currentSolItem.solNum)"
-            currentDate.text = currentSolItem.firstUTC.fromUTCToDateMonthString()
+        guard let currentSolItem = self.currentSol else {
+            return
+        }
+        
+        guard cellNotConfigured else {
+            return
+        }
+        
+        print("\(currentSolItem.solNum) configureCell")
+        solNumber.text = "Sol \(currentSolItem.solNum)"
+        currentDate.text = currentSolItem.firstUTC.fromUTCToDateMonthString()
+        solValidation.tintColor = getGeneralValidatorColor()
+        
+        if isSolTempValid {
             avgTemp.text = currentSolItem.avgTemp.formattedAsTemperatureString()
             maxTemp.text = currentSolItem.maxTemp.formattedAsTemperatureString()
             minTemp.text = currentSolItem.minTemp.formattedAsTemperatureString()
-            avgWindSpeed.text = currentSolItem.avgWindSpeed.formattedAsWindSpeedString()
-            avgAtmPressure.text = currentSolItem.avgAtmPressure.formattedAsAtmPressureString()
-            tempValidator.tintColor = getValidatorColor(for: currentSolItem.tempValidity)
-            windValidator.tintColor = getValidatorColor(for: currentSolItem.windSpeedValidity)
-            pressureValidator.tintColor = getValidatorColor(for: currentSolItem.atmPressureValidity)
-            solValidation.tintColor = getGeneralValidatorColor()
         }
+        
+        if isSolWindSpeedValid {
+            avgWindSpeed.text = currentSolItem.avgWindSpeed.formattedAsWindSpeedString()
+        }
+        
+        if isSolAtmPressureValid {
+            avgAtmPressure.text = currentSolItem.avgAtmPressure.formattedAsAtmPressureString()
+        }
+        
+        self.changeColorsForNALabelsIfNeeded()
+        cellNotConfigured = false
+        
     }
 
 }

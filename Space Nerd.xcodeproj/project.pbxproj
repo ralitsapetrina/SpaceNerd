@@ -15,6 +15,7 @@
 		A26B292A237CA492009D68E0 /* SingleSolCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26B2929237CA492009D68E0 /* SingleSolCell.swift */; };
 		D1117FE124B2FB9700F616DA /* SingleSolCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1117FE024B2FB9700F616DA /* SingleSolCell.xib */; };
 		D1554A6A25343DB800DAF426 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1554A6925343DB800DAF426 /* DoubleExtension.swift */; };
+		D17439F225643FC500C7FD6E /* CardUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17439F125643FC500C7FD6E /* CardUIView.swift */; };
 		D17AE45024F976AF00C2EBA1 /* PascalToHectopascal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17AE44F24F976AF00C2EBA1 /* PascalToHectopascal.swift */; };
 		D17AE45224F978B300C2EBA1 /* MeterToKilometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17AE45124F978B300C2EBA1 /* MeterToKilometer.swift */; };
 		D17AE45424F9799300C2EBA1 /* MpsToKmph.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17AE45324F9799300C2EBA1 /* MpsToKmph.swift */; };
@@ -45,6 +46,7 @@
 		A26B2929237CA492009D68E0 /* SingleSolCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSolCell.swift; sourceTree = "<group>"; };
 		D1117FE024B2FB9700F616DA /* SingleSolCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleSolCell.xib; sourceTree = "<group>"; };
 		D1554A6925343DB800DAF426 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
+		D17439F125643FC500C7FD6E /* CardUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardUIView.swift; sourceTree = "<group>"; };
 		D17AE44F24F976AF00C2EBA1 /* PascalToHectopascal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PascalToHectopascal.swift; sourceTree = "<group>"; };
 		D17AE45124F978B300C2EBA1 /* MeterToKilometer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeterToKilometer.swift; sourceTree = "<group>"; };
 		D17AE45324F9799300C2EBA1 /* MpsToKmph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MpsToKmph.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 		A24E09E2234286150087087B /* Space Nerd */ = {
 			isa = PBXGroup;
 			children = (
+				D17439F025643F9900C7FD6E /* CustomClasses */,
 				D17AE44E24F9769500C2EBA1 /* Converters */,
 				D17AE44B24F974B300C2EBA1 /* Extensions */,
 				A24E09F723428E220087087B /* MarsWeatherView */,
@@ -140,6 +143,14 @@
 				D1117FE024B2FB9700F616DA /* SingleSolCell.xib */,
 			);
 			path = SingleSolCell;
+			sourceTree = "<group>";
+		};
+		D17439F025643F9900C7FD6E /* CustomClasses */ = {
+			isa = PBXGroup;
+			children = (
+				D17439F125643FC500C7FD6E /* CardUIView.swift */,
+			);
+			path = CustomClasses;
 			sourceTree = "<group>";
 		};
 		D17AE44B24F974B300C2EBA1 /* Extensions */ = {
@@ -232,7 +243,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1030;
+				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = "Ralitsa Petrina";
 				TargetAttributes = {
 					A24E09DF234286150087087B = {
@@ -290,6 +301,7 @@
 			files = (
 				D1554A6A25343DB800DAF426 /* DoubleExtension.swift in Sources */,
 				A24E09E6234286150087087B /* MarsWeatherViewController.swift in Sources */,
+				D17439F225643FC500C7FD6E /* CardUIView.swift in Sources */,
 				A24E09E4234286150087087B /* AppDelegate.swift in Sources */,
 				D17AE45024F976AF00C2EBA1 /* PascalToHectopascal.swift in Sources */,
 				D17AE45424F9799300C2EBA1 /* MpsToKmph.swift in Sources */,
@@ -347,6 +359,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -408,6 +421,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

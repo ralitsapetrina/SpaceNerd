@@ -20,6 +20,18 @@ class SolDataItem {
     let windSpeedValidity: Bool?
     let atmPressureValidity: Bool?
     
+    var isTempValid: Bool {
+        return tempValidity ?? false
+    }
+    
+    var isWindSpeedValid: Bool {
+        return windSpeedValidity ?? false
+    }
+    
+    var isAtmPressureValid: Bool {
+        return atmPressureValidity ?? false
+    }
+    
     init(solNum: String, avgTemp: Double, minTemp: Double, maxTemp: Double, avgWindSpeed: Double, firstUTC: String, avgAtmPressure: Double, tempValidity: Bool, windSpeedValidity: Bool, atmPressureValidity: Bool) {
         self.solNum = solNum
         self.avgTemp = avgTemp

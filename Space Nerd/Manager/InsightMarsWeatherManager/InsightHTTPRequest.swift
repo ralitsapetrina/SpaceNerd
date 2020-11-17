@@ -84,8 +84,8 @@ class InsightData {
     func getSolData(with data: Dictionary<String, Any>) -> Array<SolDataItem>{
         var mySols: Array<SolDataItem> = []
         for sol in self.solKeys {
-            let mySolDataObject = self.createSolDataObject(dataDict: data[sol] as! Dictionary<String, Any>)
-            let myValidityCheckObject = self.createValidityCheckObject(validityChecks: self.validityChecks[sol] as! Dictionary<String, Any>)
+            let mySolDataObject = self.createSolDataObject(dataDict: data[sol] as? Dictionary<String, Any> ?? [:])
+            let myValidityCheckObject = self.createValidityCheckObject(validityChecks: self.validityChecks[sol] as? Dictionary<String, Any> ?? [:])
             mySols.append(self.createSolDataItem(solData: mySolDataObject, validityChecks: myValidityCheckObject, forSol: sol))
         }
         return mySols

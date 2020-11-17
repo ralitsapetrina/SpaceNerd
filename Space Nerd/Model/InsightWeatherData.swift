@@ -19,13 +19,13 @@ struct SolData {
     var firstUTC: String
     
     init(solDict: Dictionary<String, Any>) {
-        self.Season = solDict["Season"] as! String
-        self.horizontalWindSpeed = WeatherData(solDataDict: solDict["HWS"] as! Dictionary<String, Any>)
-        self.windDirection = solDict["WD"] as! Dictionary<String, Any>
-        self.atmosphericPressure = WeatherData(solDataDict: solDict["PRE"] as! Dictionary<String, Any>)
-        self.lastUTC = solDict["Last_UTC"] as! String
-        self.atmosphericTemperature = WeatherData(solDataDict: solDict["AT"] as! Dictionary<String, Any>)
-        self.firstUTC = solDict["First_UTC"] as! String
+        self.Season = solDict["Season"] as? String ?? ""
+        self.horizontalWindSpeed = WeatherData(solDataDict: solDict["HWS"] as? Dictionary<String, Any> ?? [:])
+        self.windDirection = solDict["WD"] as? Dictionary<String, Any> ?? [:]
+        self.atmosphericPressure = WeatherData(solDataDict: solDict["PRE"] as? Dictionary<String, Any> ?? [:])
+        self.lastUTC = solDict["Last_UTC"] as? String ?? ""
+        self.atmosphericTemperature = WeatherData(solDataDict: solDict["AT"] as? Dictionary<String, Any> ?? [:])
+        self.firstUTC = solDict["First_UTC"] as? String ?? ""
     }
 }
 
@@ -37,10 +37,10 @@ struct WeatherData {
     var maxValue: Double
     
     init(solDataDict: Dictionary<String, Any>) {
-        self.avarageValue = solDataDict["av"] as! Double
-        self.recordedSamplesOverSol = solDataDict["ct"] as! Int
-        self.minValue = solDataDict["mn"] as! Double
-        self.maxValue = solDataDict["mx"] as! Double
+        self.avarageValue = solDataDict["av"] as? Double ?? 0
+        self.recordedSamplesOverSol = solDataDict["ct"] as? Int ?? 0
+        self.minValue = solDataDict["mn"] as? Double ?? 0
+        self.maxValue = solDataDict["mx"] as? Double ?? 0
     }
 }
 
@@ -53,11 +53,11 @@ struct MostCommonWindDirection {
     var numberOfSamples: Int
     
     init(windDataDict: Dictionary<String, Any>) {
-        self.compassDegrees = windDataDict["compass_degrees"] as! Double
-        self.compassPoint = windDataDict["compass_point"] as! String
-        self.compassRight = windDataDict["compass_right"] as! Double
-        self.compassUp = windDataDict["compass_up"] as! Double
-        self.numberOfSamples = windDataDict["ct"] as! Int
+        self.compassDegrees = windDataDict["compass_degrees"] as? Double ?? 0
+        self.compassPoint = windDataDict["compass_point"] as? String ?? ""
+        self.compassRight = windDataDict["compass_right"] as? Double ?? 0
+        self.compassUp = windDataDict["compass_up"] as? Double ?? 0
+        self.numberOfSamples = windDataDict["ct"] as? Int ?? 0
     }
 }
 
@@ -69,10 +69,10 @@ struct ValidityChecks {
     var windDirectionCheck: ValidationData
     
     init(validationDictPerItem: Dictionary<String, Any>) {
-        self.atmosphericTemperatureCheck = ValidationData(validatonDict: validationDictPerItem["AT"] as! Dictionary<String, Any>)
-        self.horizontalWindSpeedCheck = ValidationData(validatonDict: validationDictPerItem["HWS"] as! Dictionary<String, Any>)
-        self.atmosphericPressure = ValidationData(validatonDict: validationDictPerItem["PRE"] as! Dictionary<String, Any>)
-        self.windDirectionCheck = ValidationData(validatonDict: validationDictPerItem["WD"] as! Dictionary<String, Any>)
+        self.atmosphericTemperatureCheck = ValidationData(validatonDict: validationDictPerItem["AT"] as? Dictionary<String, Any> ?? [:])
+        self.horizontalWindSpeedCheck = ValidationData(validatonDict: validationDictPerItem["HWS"] as? Dictionary<String, Any> ?? [:])
+        self.atmosphericPressure = ValidationData(validatonDict: validationDictPerItem["PRE"] as? Dictionary<String, Any> ?? [:])
+        self.windDirectionCheck = ValidationData(validatonDict: validationDictPerItem["WD"] as? Dictionary<String, Any> ?? [:])
     }
 }
 
@@ -82,8 +82,8 @@ struct ValidationData {
     var isValid: Bool
     
     init(validatonDict: Dictionary<String, Any>) {
-        self.solHoursWithData = validatonDict["sol_hours_with_data"] as! Array<Int>
-        self.isValid = validatonDict["valid"] as! Bool
+        self.solHoursWithData = validatonDict["sol_hours_with_data"] as? Array<Int> ?? []
+        self.isValid = validatonDict["valid"] as? Bool ?? false
     }
 }
 

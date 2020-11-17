@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "pexels-johannes-rapprich-1248157.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "pexels-johannes-rapprich-1248158.jpg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "pexels-johannes-rapprich-1248159.jpg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
