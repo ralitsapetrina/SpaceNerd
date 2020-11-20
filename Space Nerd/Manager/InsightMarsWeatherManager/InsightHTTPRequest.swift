@@ -102,7 +102,19 @@ class InsightData {
     }
     
     func createSolDataItem(solData: SolData, validityChecks: ValidityChecks, forSol: String) -> SolDataItem {
-        let mySolData = SolDataItem(solNum: forSol, avgTemp: solData.atmosphericTemperature.avarageValue, minTemp: solData.atmosphericTemperature.minValue, maxTemp: solData.atmosphericTemperature.maxValue, avgWindSpeed: solData.horizontalWindSpeed.avarageValue, firstUTC: solData.firstUTC, avgAtmPressure: solData.atmosphericPressure.avarageValue, tempValidity: validityChecks.atmosphericTemperatureCheck.isValid, windSpeedValidity: validityChecks.horizontalWindSpeedCheck.isValid, atmPressureValidity: validityChecks.atmosphericPressure.isValid)
+        let mySolData = SolDataItem (
+            solNum: forSol,
+            avgTemp: solData.atmosphericTemperature.avarageValue,
+            minTemp: solData.atmosphericTemperature.minValue,
+            maxTemp: solData.atmosphericTemperature.maxValue,
+            avgWindSpeed: solData.horizontalWindSpeed.avarageValue,
+            firstUTC: solData.firstUTC,
+            avgAtmPressure: solData.atmosphericPressure.avarageValue,
+            tempValidity: validityChecks.atmosphericTemperatureCheck.isValid,
+            windSpeedValidity: validityChecks.horizontalWindSpeedCheck.isValid,
+            atmPressureValidity: validityChecks.atmosphericPressure.isValid,
+            season: solData.Season
+        )
         return mySolData
     }
 }

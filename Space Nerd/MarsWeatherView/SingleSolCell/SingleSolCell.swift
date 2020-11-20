@@ -23,15 +23,6 @@ class SingleSolCell: UITableViewCell {
     var currentSol: SolDataItem?
     var cellNotConfigured: Bool = true
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func layoutSubviews() {
-        super.layoutSubviews()
-//        self.configureCell()
-    }
-    
     var isSolTempValid: Bool {
         if let currentSol = currentSol {
             return currentSol.isTempValid
@@ -88,16 +79,17 @@ class SingleSolCell: UITableViewCell {
         }
     }
     
+    func assignNAForNotValidLabels(for labels: [UILabel]) {
+        for label in labels {
+            label.text = "N/A"
+        }
+    }
+    
     func configureCell() {
         guard let currentSolItem = self.currentSol else {
             return
         }
         
-        guard cellNotConfigured else {
-            return
-        }
-        
-        print("\(currentSolItem.solNum) configureCell")
         solNumber.text = "Sol \(currentSolItem.solNum)"
         currentDate.text = currentSolItem.firstUTC.fromUTCToDateMonthString()
         solValidation.tintColor = getGeneralValidatorColor()
@@ -106,19 +98,23 @@ class SingleSolCell: UITableViewCell {
             avgTemp.text = currentSolItem.avgTemp.formattedAsTemperatureString()
             maxTemp.text = currentSolItem.maxTemp.formattedAsTemperatureString()
             minTemp.text = currentSolItem.minTemp.formattedAsTemperatureString()
+        } else {
+            self.assignNAForNotValidLabels(for: [avgTemp, maxTemp, minTemp])
         }
         
         if isSolWindSpeedValid {
             avgWindSpeed.text = currentSolItem.avgWindSpeed.formattedAsWindSpeedString()
+        } else {
+            self.assignNAForNotValidLabels(for: [avgWindSpeed])
         }
         
         if isSolAtmPressureValid {
             avgAtmPressure.text = currentSolItem.avgAtmPressure.formattedAsAtmPressureString()
+        } else {
+            assignNAForNotValidLabels(for: [avgAtmPressure])
         }
         
         self.changeColorsForNALabelsIfNeeded()
-        cellNotConfigured = false
-        
     }
 
 }

@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,7 +12,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MarsWeatherViewController" customModule="Space_Nerd" customModuleProvider="target">
             <connections>
+                <outlet property="overviewLabel" destination="7LQ-PY-prc" id="PGU-g4-Lly"/>
+                <outlet property="seasonLabel" destination="hc9-I9-fbg" id="332-LF-Gjv"/>
                 <outlet property="solsTable" destination="9xf-ie-6RZ" id="KZf-N8-Wat"/>
+                <outlet property="tableHeaderView" destination="Y3l-pJ-bDK" id="ynR-Xt-AiE"/>
                 <outlet property="view" destination="iN0-l3-epB" id="56c-ZO-Amc"/>
             </connections>
         </placeholder>
@@ -23,7 +27,7 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starry_pink_background" translatesAutoresizingMaskIntoConstraints="NO" id="afT-6Q-kle">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                 </imageView>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9xf-ie-6RZ">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="9xf-ie-6RZ">
                     <rect key="frame" x="8" y="44" width="398" height="818"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
@@ -42,9 +46,74 @@
             </constraints>
             <point key="canvasLocation" x="139" y="142"/>
         </view>
+        <view contentMode="scaleToFill" id="Y3l-pJ-bDK">
+            <rect key="frame" x="0.0" y="0.0" width="415" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QbK-65-DHI" customClass="CardUIView" customModule="Space_Nerd" customModuleProvider="target">
+                    <rect key="frame" x="16" y="12" width="383" height="72"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hc9-I9-fbg" userLabel="SeasonLabel">
+                            <rect key="frame" x="93" y="34" width="0.0" height="0.0"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" name="SeasonColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Season:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zg3-QP-bHc">
+                            <rect key="frame" x="16" y="16" width="55" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" name="SpaceNAText"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTC-80-pXb">
+                            <rect key="frame" x="16" y="42" width="69" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" name="SpaceNAText"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7LQ-PY-prc" userLabel="OverviewLabel">
+                            <rect key="frame" x="93" y="60" width="0.0" height="0.0"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" name="SpacePrimaryText"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="7LQ-PY-prc" firstAttribute="leading" secondItem="hc9-I9-fbg" secondAttribute="leading" id="CtE-8a-5f7"/>
+                        <constraint firstItem="vTC-80-pXb" firstAttribute="leading" secondItem="zg3-QP-bHc" secondAttribute="leading" id="FHd-mC-0hl"/>
+                        <constraint firstItem="zg3-QP-bHc" firstAttribute="leading" secondItem="QbK-65-DHI" secondAttribute="leading" constant="16" id="cTm-H0-EWq"/>
+                        <constraint firstItem="7LQ-PY-prc" firstAttribute="leading" secondItem="vTC-80-pXb" secondAttribute="trailing" constant="8" id="eSu-33-EiK"/>
+                        <constraint firstItem="vTC-80-pXb" firstAttribute="top" secondItem="zg3-QP-bHc" secondAttribute="bottom" constant="8" id="ggz-uI-ymD"/>
+                        <constraint firstItem="hc9-I9-fbg" firstAttribute="bottom" secondItem="zg3-QP-bHc" secondAttribute="bottom" id="gky-pO-okh"/>
+                        <constraint firstItem="7LQ-PY-prc" firstAttribute="bottom" secondItem="vTC-80-pXb" secondAttribute="bottom" id="lEr-PR-p5h"/>
+                        <constraint firstItem="zg3-QP-bHc" firstAttribute="top" secondItem="QbK-65-DHI" secondAttribute="top" constant="16" id="p8L-T8-ayj"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="pCV-Pb-pP9"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="pCV-Pb-pP9" firstAttribute="trailing" secondItem="QbK-65-DHI" secondAttribute="trailing" constant="16" id="9U2-aY-uaT"/>
+                <constraint firstAttribute="bottom" secondItem="QbK-65-DHI" secondAttribute="bottom" constant="16" id="Bdb-fp-WxO"/>
+                <constraint firstItem="QbK-65-DHI" firstAttribute="leading" secondItem="pCV-Pb-pP9" secondAttribute="leading" constant="16" id="J9y-X5-r96"/>
+                <constraint firstItem="QbK-65-DHI" firstAttribute="top" secondItem="Y3l-pJ-bDK" secondAttribute="top" constant="12" id="xbg-zb-HpB"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="138" y="-228"/>
+        </view>
     </objects>
     <resources>
         <image name="starry_pink_background" width="1710" height="2280"/>
+        <namedColor name="SeasonColor">
+            <color red="0.17647058823529413" green="0.0" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SpaceNAText">
+            <color red="0.52941176470588236" green="0.51372549019607838" blue="0.54117647058823526" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SpacePrimaryText">
+            <color red="0.29019607843137257" green="0.27058823529411763" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

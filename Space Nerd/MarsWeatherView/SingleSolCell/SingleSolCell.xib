@@ -17,7 +17,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jB8-py-TzG" customClass="CardUIView" customModule="Space_Nerd" customModuleProvider="target">
-                    <rect key="frame" x="16" y="8" width="382" height="176"/>
+                    <rect key="frame" x="16" y="12" width="382" height="176"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="isR-Ik-TFO">
                             <rect key="frame" x="16" y="17" width="20" height="17.5"/>
@@ -34,8 +34,8 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aug. 27" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pm7-14-jS5">
-                            <rect key="frame" x="40" y="38" width="43.5" height="15"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <rect key="frame" x="40" y="38" width="46.5" height="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <color key="textColor" name="SpacePrimaryText"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -90,7 +90,7 @@
                                         <constraint firstAttribute="height" constant="20" id="nCO-N4-Sut"/>
                                         <constraint firstAttribute="width" constant="50" id="uda-Kd-4Mm"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                     <color key="textColor" name="SpacePrimaryText"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -108,7 +108,7 @@
                                         <constraint firstAttribute="height" constant="20" id="N35-UT-209"/>
                                         <constraint firstAttribute="width" constant="50" id="bZ3-5T-y7H"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                     <color key="textColor" name="SpacePrimaryText"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -148,7 +148,7 @@
                                         <constraint firstAttribute="width" constant="60" id="F25-kN-eb5"/>
                                         <constraint firstAttribute="height" constant="30" id="q8v-Kf-sgk"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                     <color key="textColor" name="SpacePrimaryText"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -166,7 +166,7 @@
                                         <constraint firstAttribute="height" constant="30" id="JgN-OC-nWb"/>
                                         <constraint firstAttribute="width" constant="60" id="rmN-yj-zmn"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                     <color key="textColor" name="SpacePrimaryText"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -211,9 +211,9 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="jB8-py-TzG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="1Iw-l2-5HM"/>
-                <constraint firstAttribute="bottom" secondItem="jB8-py-TzG" secondAttribute="bottom" constant="16" id="2Qk-3x-fgv"/>
+                <constraint firstAttribute="bottom" secondItem="jB8-py-TzG" secondAttribute="bottom" constant="12" id="2Qk-3x-fgv"/>
                 <constraint firstAttribute="trailing" secondItem="jB8-py-TzG" secondAttribute="trailing" constant="16" id="doD-sI-fcI"/>
-                <constraint firstItem="jB8-py-TzG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="jKk-6P-cu5"/>
+                <constraint firstItem="jB8-py-TzG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="jKk-6P-cu5"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>

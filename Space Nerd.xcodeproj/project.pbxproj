@@ -16,6 +16,9 @@
 		D1117FE124B2FB9700F616DA /* SingleSolCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1117FE024B2FB9700F616DA /* SingleSolCell.xib */; };
 		D1554A6A25343DB800DAF426 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1554A6925343DB800DAF426 /* DoubleExtension.swift */; };
 		D17439F225643FC500C7FD6E /* CardUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17439F125643FC500C7FD6E /* CardUIView.swift */; };
+		D1743A2F2568414A00C7FD6E /* InsightOverviewTexts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1743A2E2568414A00C7FD6E /* InsightOverviewTexts.swift */; };
+		D1743A5625685E5900C7FD6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1743A5525685E5900C7FD6E /* LaunchScreen.storyboard */; };
+		D1743A60256864EE00C7FD6E /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1743A5F256864EE00C7FD6E /* UITableViewExtension.swift */; };
 		D17AE45024F976AF00C2EBA1 /* PascalToHectopascal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17AE44F24F976AF00C2EBA1 /* PascalToHectopascal.swift */; };
 		D17AE45224F978B300C2EBA1 /* MeterToKilometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17AE45124F978B300C2EBA1 /* MeterToKilometer.swift */; };
 		D17AE45424F9799300C2EBA1 /* MpsToKmph.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17AE45324F9799300C2EBA1 /* MpsToKmph.swift */; };
@@ -47,6 +50,9 @@
 		D1117FE024B2FB9700F616DA /* SingleSolCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleSolCell.xib; sourceTree = "<group>"; };
 		D1554A6925343DB800DAF426 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		D17439F125643FC500C7FD6E /* CardUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardUIView.swift; sourceTree = "<group>"; };
+		D1743A2E2568414A00C7FD6E /* InsightOverviewTexts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightOverviewTexts.swift; sourceTree = "<group>"; };
+		D1743A5525685E5900C7FD6E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D1743A5F256864EE00C7FD6E /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		D17AE44F24F976AF00C2EBA1 /* PascalToHectopascal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PascalToHectopascal.swift; sourceTree = "<group>"; };
 		D17AE45124F978B300C2EBA1 /* MeterToKilometer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeterToKilometer.swift; sourceTree = "<group>"; };
 		D17AE45324F9799300C2EBA1 /* MpsToKmph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MpsToKmph.swift; sourceTree = "<group>"; };
@@ -106,6 +112,7 @@
 				A24E09F523428E020087087B /* Model */,
 				A24E09E3234286150087087B /* AppDelegate.swift */,
 				A24E09EF2342861B0087087B /* Info.plist */,
+				D1743A5525685E5900C7FD6E /* LaunchScreen.storyboard */,
 			);
 			path = "Space Nerd";
 			sourceTree = "<group>";
@@ -114,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				A24E09F8234291EC0087087B /* InsightWeatherData.swift */,
+				D1743A2E2568414A00C7FD6E /* InsightOverviewTexts.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -157,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				D1554A6925343DB800DAF426 /* DoubleExtension.swift */,
+				D1743A5F256864EE00C7FD6E /* UITableViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -280,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A24E09EB2342861B0087087B /* Assets.xcassets in Resources */,
+				D1743A5625685E5900C7FD6E /* LaunchScreen.storyboard in Resources */,
 				D1117FE124B2FB9700F616DA /* SingleSolCell.xib in Resources */,
 				D19F5E7224C324D100F88B73 /* MarsWeatherViewController.xib in Resources */,
 			);
@@ -309,8 +319,10 @@
 				D19F5E7624C633C100F88B73 /* SolDataItem.swift in Sources */,
 				A26B292A237CA492009D68E0 /* SingleSolCell.swift in Sources */,
 				D17AE45224F978B300C2EBA1 /* MeterToKilometer.swift in Sources */,
+				D1743A2F2568414A00C7FD6E /* InsightOverviewTexts.swift in Sources */,
 				A24E09FB2342921D0087087B /* InsightHTTPRequest.swift in Sources */,
 				A24E09F9234291EC0087087B /* InsightWeatherData.swift in Sources */,
+				D1743A60256864EE00C7FD6E /* UITableViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +467,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z23P68FL2M;
 				INFOPLIST_FILE = "Space Nerd/Info.plist";
@@ -474,6 +487,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z23P68FL2M;
 				INFOPLIST_FILE = "Space Nerd/Info.plist";

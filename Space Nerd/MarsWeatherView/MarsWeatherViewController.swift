@@ -14,15 +14,19 @@ class MarsWeatherViewController: UIViewController {
     var weatherDict: Dictionary<String, Any> = [:]
     var solItems: Array<SolDataItem>?
     @IBOutlet weak var solsTable: UITableView!
+    @IBOutlet var tableHeaderView: UIView!
+    @IBOutlet weak var seasonLabel: UILabel!
+    @IBOutlet weak var overviewLabel: UILabel!
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.loadSolItems()
+        self.setUpOverviewLabel()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.setUpTableView()
     }
     
@@ -38,10 +42,26 @@ class MarsWeatherViewController: UIViewController {
                     self.present(alert, animated: true, completion: nil)
                 case .success(let solArray):
                     self.solItems = solArray
+                    self.assingSeasonResult()
                 }
                 self.solsTable.reloadData()
             }
             
+        }
+    }
+    
+    func setUpTableHeader() {
+        self.solsTable.tableHeaderView = self.tableHeaderView
+    }
+    
+    func setUpOverviewLabel() {
+        let randomNumber = Int.random(in: 1...8)
+        self.overviewLabel.text = insightOverViewTexts[randomNumber]
+    }
+    
+    func assingSeasonResult() {
+        if let lastSolItem = self.solItems?.last {
+            self.seasonLabel.text = lastSolItem.season.capitalized
         }
     }
     
@@ -50,6 +70,7 @@ class MarsWeatherViewController: UIViewController {
         self.solsTable.dataSource = self
         let nib = UINib(nibName: "SingleSolCell", bundle: nil)
         solsTable.register(nib, forCellReuseIdentifier: "SingleSolCell")
+        self.setUpTableHeader()
     }
 }
 
@@ -65,13 +86,19 @@ extension MarsWeatherViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SingleSolCell") as! SingleSolCell
         cell.backgroundColor = .clear
-        cell.currentSol = solItems?[indexPath.row]
+        let currentSolItem = solItems?[indexPath.row]
+        cell.currentSol = currentSolItem
+        cell.configureCell()
         return cell
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if let myCell = cell as? SingleSolCell {
-            myCell.configureCell()
+        if let cell = cell as? SingleSolCell {
+            cell.alpha = 0.3
+            UIView.animate(withDuration: 0.8, delay: 0.08 * Double(indexPath.row), animations: {
+                cell.alpha = 1
+            })
+            
         }
     }
     

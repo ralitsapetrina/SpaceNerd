@@ -66,13 +66,13 @@ struct ValidityChecks {
     var atmosphericTemperatureCheck: ValidationData
     var horizontalWindSpeedCheck: ValidationData
     var atmosphericPressure: ValidationData
-    var windDirectionCheck: ValidationData
+    var windDirectionCheck: ValidationData // not used
     
     init(validationDictPerItem: Dictionary<String, Any>) {
         self.atmosphericTemperatureCheck = ValidationData(validatonDict: validationDictPerItem["AT"] as? Dictionary<String, Any> ?? [:])
         self.horizontalWindSpeedCheck = ValidationData(validatonDict: validationDictPerItem["HWS"] as? Dictionary<String, Any> ?? [:])
         self.atmosphericPressure = ValidationData(validatonDict: validationDictPerItem["PRE"] as? Dictionary<String, Any> ?? [:])
-        self.windDirectionCheck = ValidationData(validatonDict: validationDictPerItem["WD"] as? Dictionary<String, Any> ?? [:])
+        self.windDirectionCheck = ValidationData(validatonDict: validationDictPerItem["WD"] as? Dictionary<String, Any> ?? [:]) // not used
     }
 }
 
